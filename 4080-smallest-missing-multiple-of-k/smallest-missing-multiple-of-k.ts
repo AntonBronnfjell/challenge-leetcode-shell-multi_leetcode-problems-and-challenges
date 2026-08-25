@@ -6,8 +6,6 @@ function missingMultiple(nums: number[], k: number): number {
         }
     });
 
-    //filteredValues.sort((a, b) => a - b);
-
     let i = 1;
     let value = k;
     do {
