@@ -2,5 +2,7 @@ type JSONValue = null | boolean | number | string | JSONValue[] | { [key: string
 type Obj = Record<string, JSONValue> | JSONValue[]
 
 function isEmpty(obj: Obj): boolean {
-    return Object.keys(obj).length === 0;
+    if (Array.isArray(obj)) return obj.length === 0;
+    for (const _ in obj) return false;
+    return true;
 };
